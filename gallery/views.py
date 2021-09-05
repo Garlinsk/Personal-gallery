@@ -6,7 +6,7 @@ import datetime as dt
 
 def index(request):
     date = dt.date.today()
-    # images = Image.get_images()
+    images = Image.get_images()
     # location = Location.get_location()
     # locations = Location.get_location()
 

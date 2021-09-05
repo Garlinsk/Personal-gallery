@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'photos.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'frankie',
         'USER': 'garlinsk',
-        'PASSWORD':'safari',
+        'PASSWORD':'Kuloba3811',
     }
 }
 
