@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models.deletion import CASCADE
+
 # Create your models here.
 class Location(models.Model):
     location = models.CharField(max_length= 255, blank =True)
@@ -54,8 +54,8 @@ class Image(models.Model):
     image_name = models.CharField(max_length=255)
     description = models.TextField()
     image_file = models.ImageField(upload_to = 'images/', default='images/beagle.jpg')
-    location = models.ForeignKey(Location)
-    category = models.ForeignKey(Category,on_delete=CASCADE)
+    category = models.ForeignKey(Category,on_delete=models.CASCADE)
+    location = models.ForeignKey(Location,on_delete=models.CASCADE)
     pub_date = models.DateTimeField(auto_now_add=True)
        
     def save_image(self):
@@ -84,17 +84,17 @@ class Image(models.Model):
         images = cls.objects.filter(category__category=category)
         return images
     
-    # @classmethod
-    # def get_image(request, id):
-    #     locations = Location.get_location()
-    #     try:
-    #         image = Image.objects.get(pk = id)
-    #         print(image)
+    @classmethod
+    def get_image(request, id):
+        locations = Location.get_location()
+        try:
+            image = Image.objects.get(pk = id)
+            print(image)
             
-    #     except ObjectDoesNotExist:
-    #         raise Http404()
+        except ObjectDoesNotExist:
+            raise Http404()
         
-    #     return image
+        return image
     
     def __str__(self):
         return self.image_name
