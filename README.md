@@ -49,7 +49,9 @@ To work with GARLINSK GALLERY App you need to have some few prerequisites.
 6. On your **bash** terminal Run the command:-
 
 7.  ```
-   python3.9 -m pip install Django ,python3.9 -m pip install Django-Bootstrap5 python3.9 -m pip install -r requirements.txt
+   python3.9 -m pip install Django ,
+   python3.9 -m pip install Django-Bootstrap5,
+   python3.9 -m pip install -r requirements.txt
      ```
 
 8. you can run;   $ python3.9 manage.py runserver
