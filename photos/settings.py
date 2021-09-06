@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'bootstrap5',
+    'bootstrap4',
     'gallery.apps.GalleryConfig',
     'django.contrib.admin',
     'django.contrib.auth',
