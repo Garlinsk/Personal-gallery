@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.templatetags.static import static
-from django.shortcuts import render,redirect
+from django.shortcuts import render
 from django.http import HttpResponse, Http404
 import datetime as dt
 from .models import Location, Image, Category
@@ -13,6 +13,8 @@ def index(request):
     images = Image.get_images()
     location = Location.get_location()
     locations = Location.get_location()
+    image_url = request._current_scheme_host+request.path
+    print("my_url",image_url)
 
     return render(request, 'index.html', {"date": date, "images":images, "location": location, "locations": locations})
 
@@ -32,6 +34,7 @@ def search_images(request):
 
 def get_image(request, id):
         locations = Location.get_location()
+       
         try:
             image = Image.objects.get(pk = id)
             print(image)
