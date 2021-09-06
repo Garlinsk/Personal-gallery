@@ -24,16 +24,13 @@ To work with GARLINSK GALLERY App you need to have some few prerequisites.
 
 - Python3.9
 
-- pip
-
 - Django
 
-- pyperclip
+- Postgresql
 
 - create a virtual environment
 
-- Terminal
-
+- MDBootstrap
 ## SETUP
 
 1. You will need Internet connection.
