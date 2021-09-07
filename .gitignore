@@ -1,0 +1,5 @@
+virtual
+gallery/*.pyc
+photos/*.pyc
+.vscode/
+.env
